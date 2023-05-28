@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Predict credit card approval by Aditi Dadariya</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<!-- <body style="background: #000;"> -->
+<body>
+ <div class="login">
+	<h1>Prediction for Credit Card Aprroval</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="A1" placeholder="A1" required="required" />
+        <input type="text" name="A2" placeholder="A2" required="required" />
+        <input type="text" name="A3" placeholder="A3" required="required" />
+        <input type="text" name="A4" placeholder="A4" required="required" />
+        <input type="text" name="A5" placeholder="A5" required="required" />
+        <input type="text" name="A6" placeholder="A6" required="required" />
+        <input type="text" name="A7" placeholder="A7" required="required" />
+        <input type="text" name="A8" placeholder="A8" required="required" />
+        <input type="text" name="A9" placeholder="A9" required="required" />
+        <input type="text" name="A10" placeholder="A10" required="required" />
+        <input type="text" name="A11" placeholder="A11" required="required" />
+        <input type="text" name="A12" placeholder="A12" required="required" />
+        <input type="text" name="A13" placeholder="A13" required="required" />
+        <input type="text" name="A14" placeholder="A14" required="required" />
+        <input type="text" name="A15" placeholder="A15" required="required" />
+        
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction_text }}
+
+ </div>
+</body>
+</html>
