@@ -30,7 +30,7 @@ def predict():
         output = "Approved"
     return render_template("index.html", prediction_text = "The predicted approval is {}".format(output))
 
-@app.route('/predict_api',methods=['POST'])
+@flask_app.route('/predict_api',methods=['POST'])
 def predict_api():
     '''
     For direct API calls trought request
