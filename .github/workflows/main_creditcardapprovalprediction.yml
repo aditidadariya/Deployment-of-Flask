@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'CreditCardApprovalPrediction'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_EFE7738EF8434530819E052C62B8D62A }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_F80F16B6D1E745F196195649D8713A49 }}
