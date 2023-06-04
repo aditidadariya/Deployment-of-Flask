@@ -33,12 +33,16 @@ def predict():
 @app.route('/predict_api',methods=['POST'])
 def predict_api():
     '''
-    For direct API calls trought request
+    For direct API calls through request
     '''
     data = request.get_json(force=True)
     prediction = model.predict([np.array(list(data.values()))])
 
-    output = prediction[0]
+    #output = prediction[0]
+    if prediction == [0]:
+        output = "Not Approved"
+    elif prediction == [1]:
+        output = "Approved"
     return jsonify(output)
     
 if __name__ == "__main__":
